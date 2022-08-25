@@ -1,0 +1,15 @@
+.text-content {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 250px;
+  color: rgb(13, 39, 144);
+  font-size: 40px;
+  font-style: oblique;
+}
+.text {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: oblique;
+  font-size: initial;
+}
