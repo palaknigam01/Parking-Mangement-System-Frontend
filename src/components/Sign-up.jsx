@@ -7,34 +7,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 const SignupComponent = () => {
   //let navigate = useNavigate();
-  const [inpval, setInpval] = useState({
-    name: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-
-  const [data, setData] = useState([]);
-
-  //console.log(inpval);
-
-  const getData = (e) => {
-    //console.log(e.target.value);
-
-    const { value, name } = e.target;
-    //console.log(value,name);
-    setInpval(() => {
-      return {
-        ...inpval,
-        [name]: value,
-      };
-    });
-  };
+  const [name , setname] = useState("")
+  const [email , setemail] = useState("")
+  const [password , setpassword] = useState("")
+  const [password_confirmation , setpassword_confirmation] = useState("")
 
   const onRagister = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     //console.log(inpval);
-    const { name, email, password, confirmPassword } = inpval;
+     const item = {user :{name , email , password ,password_confirmation}}
     if (name === "") {
       //alert("Username Is Required..!");
       toast.warning("Username Is Required..!");
@@ -50,23 +31,25 @@ const SignupComponent = () => {
     } else if (password.length < 5) {
       //alert("Password length must be Greater Then Five..!");
       toast.warning("Password length must be Greater Then Five..!");
-    } else if (confirmPassword === "") {
+    } else if (password_confirmation === "") {
       toast.warning("Confirmation Is Required..!!");
-    } else if (password !== confirmPassword) {
+    } else if (password !== password_confirmation) {
       toast.warning("password did not match..!");
     } else {
       // localStorage.setItem("user", JSON.stringify([...data, inpval]));
-      //alert("Ragister Succesfuly....!");
+      //alert("Ragister Succesfuly....!");9
+      console.log(item)
       axios
-        .post("https://7437-223-236-34-156.in.ngrok.io/users", inpval)
+        .post("https://3f31-2401-4900-51cd-1549-8706-53c0-d238-5f63.in.ngrok.io/users", item)
         .then((res) => {
           console.log(res);
+          toast.success("Ragister Succesfuly....!");
         })
         .catch((err) => {
           console.log(err);
           console.log(err.message);
         });
-      toast.success("Ragister Succesfuly....!");
+     
       //navigate("/home");
     }
   };
@@ -88,7 +71,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Your Name *"
                     name="name"
-                    onChange={getData}
+                    onChange={(e)=>setname(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -97,7 +80,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Email *"
                     name="email"
-                    onChange={getData}
+                    onChange={(e)=>setemail(e.target.value)}
                   />
                 </div>
               </div>
@@ -108,7 +91,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Your Password *"
                     name="password"
-                    onChange={getData}
+                    onChange={(e)=>setpassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -116,9 +99,9 @@ const SignupComponent = () => {
                     type="password"
                     className="form-control"
                     placeholder="Confirm Password *"
-                    name="confirmPassword"
-                    on
-                    onChange={getData}
+                    name="password_confirmation"
+                    onChange={(e)=>setpassword_confirmation(e.target.value)}
+                    
                   />
                 </div>
               </div>

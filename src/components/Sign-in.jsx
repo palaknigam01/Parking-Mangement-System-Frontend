@@ -1,41 +1,22 @@
-
 import React, { useState } from "react";
 import "./Sign-in.css";
 import { useNavigate } from "react-router-dom";
-//import axios from "axios";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignInComponent = () => {
   let navigate = useNavigate();
-  const [inpval, setInpval] = useState({
-    email: "",
-    password: "",
-  });
+  const [email , setemail] = useState("")
+  const [password , setpassword] = useState("")
 
-  const [data, setData] = useState([]);
-
-  //console.log(inpval);
-
-  const getData = (e) => {
-    //console.log(e.target.value);
-
-    const { value, name } = e.target;
-    //console.log(value,name);
-    setInpval(() => {
-      return {
-        ...inpval,
-        [name]: value,
-      };
-    });
-  };
+ 
 
   const onLogin = (e) => {
     e.preventDefault();
-    //console.log(inpval);
 
-    const { name, email, password, confirmPassword } = inpval;
-     if (email === "") {
+    const item = {user :{ email , password }}
+    if (email === "") {
       //alert("Email Is Required..!");
       toast.warning("Email Is Required..!");
     } else if (!email.includes("@")) {
@@ -45,22 +26,20 @@ const SignInComponent = () => {
       //alert("Password Is Required..!");
       toast.warning("Password Is Required..!");
     } else {
-      // localStorage.setItem("user", JSON.stringify([...data, inpval]));
-
-      
-    //   //alert("Ragister Succesfuly....!");
-    //   axios
-    //     .post("https://090e-223-236-34-156.in.ngrok.io/users/users", inpval)
-    //     .then((res) => {
-    //       console.log(res);
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //       console.log(err.message);
-    //     });
-      toast.success("Login Succesfuly....!");
-      navigate("/home");
-    }
+      console.log(item)
+      axios
+        .post("https://3f31-2401-4900-51cd-1549-8706-53c0-d238-5f63.in.ngrok.io/users/sign_in", item)
+        .then((res) => {
+          console.log(res);
+          toast.success("Login Sucsess....!");
+        })
+        .catch((err) => {
+          console.log(err);
+          console.log(err.message);
+        });
+     
+      //navigate("/home");
+    }     
   };
 
   return (
@@ -80,7 +59,7 @@ const SignInComponent = () => {
                     className="form-control"
                     placeholder="Email *"
                     name="email"
-                    onChange={getData}
+                    onChange={(e)=>setemail(e.target.value)}
                   />
                 </div>
               </div>
@@ -91,7 +70,7 @@ const SignInComponent = () => {
                     className="form-control"
                     placeholder="Your Password *"
                     name="password"
-                    onChange={getData}
+                    onChange={(e)=>setpassword(e.target.value)}
                   />
                 </div>
               </div>

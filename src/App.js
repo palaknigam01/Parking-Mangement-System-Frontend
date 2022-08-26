@@ -7,6 +7,7 @@ import SignInComponent from './components/Sign-in';
 import Banner from './components/Banner';
 import SignupComponent from './components/Sign-up';
 import Contectus from './components/Contect-us';
+import Sloat from './components/Sloat';
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       <Navigation />
       <Routes>
       <Route path="/home" element={<Banner/>}/>
+      <Route path="/avl-sloats" element={<Sloat/>}/>
       <Route path="/sign-up" element={<SignupComponent/>} />
       <Route path="/log-in" element={<SignInComponent/>} />
       <Route path="/contect-us" element={<Contectus/>} />
+      <Route path="" element={<> </>}/>
       </Routes>
       <br></br>
       <Footer />
