@@ -40,7 +40,7 @@ const SignupComponent = () => {
       //alert("Ragister Succesfuly....!");9
       console.log(item)
       axios
-        .post("https://3f31-2401-4900-51cd-1549-8706-53c0-d238-5f63.in.ngrok.io/users", item)
+        .post("https://0e60-2401-4900-51cd-1549-26cf-9050-e52a-130b.ap.ngrok.io/users", item)
         .then((res) => {
           console.log(res);
           toast.success("Ragister Succesfuly....!");
