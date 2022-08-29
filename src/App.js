@@ -1,25 +1,32 @@
-
-import './App.css';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import "./App.css";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
-import SignInComponent from './components/Sign-in';
-import Banner from './components/Banner';
-import SignupComponent from './components/Sign-up';
-import Contectus from './components/Contect-us';
-import Sloat from './components/Sloat';
+import SignInComponent from "./components/Sign-in";
+import Banner from "./components/Banner";
+import SignupComponent from "./components/Sign-up";
+import Contectus from "./components/Contect-us";
+import First from "./components/First-Flor";
+import Slot from "./components/Slot";
+import Third from "./components/Third-Flor";
+import Second from "./components/Second-Flor";
+import Error from "./components/Error-page";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
       <Routes>
-      <Route path="/home" element={<Banner/>}/>
-      <Route path="/avl-sloats" element={<Sloat/>}/>
-      <Route path="/sign-up" element={<SignupComponent/>} />
-      <Route path="/log-in" element={<SignInComponent/>} />
-      <Route path="/contect-us" element={<Contectus/>} />
-      <Route path="" element={<> </>}/>
+        <Route path="/" element={<Banner />} />
+        <Route path="/flor-1" element={<First />} />
+        <Route path="/flor-2" element={<Second />} />
+        <Route path="/flor-3" element={<Third />} />
+        <Route path="/sign-up" element={<SignupComponent />} />
+        <Route path="/log-in" element={<SignInComponent />} />
+        <Route path="/contect-us" element={<Contectus />} />
+        <Route path="/slots" element={<Slot />} />
+        <Route path="/" element={<> </>} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <br></br>
       <Footer />

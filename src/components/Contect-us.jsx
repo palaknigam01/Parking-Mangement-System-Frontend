@@ -29,22 +29,8 @@ const Contectus = () => {
               </form>
             </div>
           </div>
-          <div className="colmun-30 get_say_form">
+          <div className="colmun-30 justify-content-center get_say_form">
             <h5>Say Hi!</h5>
-            <ul className="get_say_info_sec">
-              <li>
-                <i className="fa fa-envelop"></i>
-                <a href="/email">divineparking@gmail.com</a>
-              </li>
-              <li>
-                <i className="fa fa-whatsapp"></i>
-                <a href="/tel:">+91-9602381997</a>
-              </li>
-              <li>
-                <i className="fa fa-skype"></i>
-                <a href="/skypeid">divinefindparkover</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

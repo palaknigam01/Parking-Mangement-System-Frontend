@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import "./Sign-up.css";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignupComponent = () => {
-  //let navigate = useNavigate();
-  const [name , setname] = useState("")
-  const [email , setemail] = useState("")
-  const [password , setpassword] = useState("")
-  const [password_confirmation , setpassword_confirmation] = useState("")
+  let navigate = useNavigate();
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  const [password_confirmation, setpassword_confirmation] = useState("");
 
   const onRagister = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     //console.log(inpval);
-     const item = {user :{name , email , password ,password_confirmation}}
+    const item = { user: { name, email, password, password_confirmation } };
     if (name === "") {
       //alert("Username Is Required..!");
       toast.warning("Username Is Required..!");
@@ -38,19 +38,18 @@ const SignupComponent = () => {
     } else {
       // localStorage.setItem("user", JSON.stringify([...data, inpval]));
       //alert("Ragister Succesfuly....!");9
-      console.log(item)
+      //console.log(item)
       axios
-        .post("https://0e60-2401-4900-51cd-1549-26cf-9050-e52a-130b.ap.ngrok.io/users", item)
+        .post("https://af3c-122-168-72-226.ap.ngrok.io/users", item)
         .then((res) => {
           console.log(res);
           toast.success("Ragister Succesfuly....!");
+          navigate("/log-in");
         })
         .catch((err) => {
           console.log(err);
           console.log(err.message);
         });
-     
-      //navigate("/home");
     }
   };
 
@@ -71,7 +70,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Your Name *"
                     name="name"
-                    onChange={(e)=>setname(e.target.value)}
+                    onChange={(e) => setname(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -80,7 +79,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Email *"
                     name="email"
-                    onChange={(e)=>setemail(e.target.value)}
+                    onChange={(e) => setemail(e.target.value)}
                   />
                 </div>
               </div>
@@ -91,7 +90,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Your Password *"
                     name="password"
-                    onChange={(e)=>setpassword(e.target.value)}
+                    onChange={(e) => setpassword(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -100,8 +99,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Confirm Password *"
                     name="password_confirmation"
-                    onChange={(e)=>setpassword_confirmation(e.target.value)}
-                    
+                    onChange={(e) => setpassword_confirmation(e.target.value)}
                   />
                 </div>
               </div>

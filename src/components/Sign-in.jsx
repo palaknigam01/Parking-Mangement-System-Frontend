@@ -7,15 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 const SignInComponent = () => {
   let navigate = useNavigate();
-  const [email , setemail] = useState("")
-  const [password , setpassword] = useState("")
-
- 
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
 
   const onLogin = (e) => {
     e.preventDefault();
 
-    const item = {user :{ email , password }}
+    const item = { user: { email, password } };
     if (email === "") {
       //alert("Email Is Required..!");
       toast.warning("Email Is Required..!");
@@ -26,20 +24,21 @@ const SignInComponent = () => {
       //alert("Password Is Required..!");
       toast.warning("Password Is Required..!");
     } else {
-      console.log(item)
+      console.log(item);
       axios
-        .post("https://0e60-2401-4900-51cd-1549-26cf-9050-e52a-130b.ap.ngrok.io/users/sign_in", item)
+        .post("https://af3c-122-168-72-226.ap.ngrok.io/users/sign_in", item)
         .then((res) => {
           console.log(res);
+          sessionStorage.setItem("token", JSON.stringify(res.data.token));
           toast.success("Login Sucsess....!");
+          navigate("/");
+          //console.log('------------------------',res.data.token);
         })
         .catch((err) => {
           console.log(err);
           console.log(err.message);
         });
-     
-      //navigate("/home");
-    }     
+    }
   };
 
   return (
@@ -59,7 +58,7 @@ const SignInComponent = () => {
                     className="form-control"
                     placeholder="Email *"
                     name="email"
-                    onChange={(e)=>setemail(e.target.value)}
+                    onChange={(e) => setemail(e.target.value)}
                   />
                 </div>
               </div>
@@ -70,7 +69,7 @@ const SignInComponent = () => {
                     className="form-control"
                     placeholder="Your Password *"
                     name="password"
-                    onChange={(e)=>setpassword(e.target.value)}
+                    onChange={(e) => setpassword(e.target.value)}
                   />
                 </div>
               </div>

@@ -90,19 +90,15 @@ input[type="submit"]:hover {
   font-size: 26px;
   margin: 0 0 40px;
 }
-ul {
+/* ul {
   display: initial;
   list-style: none;
   padding: 0px;
   margin: 0px;
   margin-right: 60px;
-}
-/* .get_say_social-icn {
-    display: flex;
-    position: absolute;
-    bottom: 40px;
-  } */
-.get_say_social-icn a {
+} */
+
+/* .get_say_social-icn a {
   font-size: 22px;
   color: #fff;
   padding: 0 20px 0 0;
@@ -135,4 +131,4 @@ ul {
 }
 .get_say_info_sec > li a:hover {
   background-color: #020202;
-}
+} */
