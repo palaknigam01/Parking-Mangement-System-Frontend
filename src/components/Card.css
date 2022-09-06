@@ -2,3 +2,6 @@
     margin: auto;
     margin-left: 15px;
 }
+.contaniner{
+    display: flex;
+}

@@ -36,11 +36,8 @@ const SignupComponent = () => {
     } else if (password !== password_confirmation) {
       toast.warning("password did not match..!");
     } else {
-      // localStorage.setItem("user", JSON.stringify([...data, inpval]));
-      //alert("Ragister Succesfuly....!");9
-      //console.log(item)
       axios
-        .post("https://af3c-122-168-72-226.ap.ngrok.io/users", item)
+        .post("https://3413-122-168-72-226.in.ngrok.io/users", item)
         .then((res) => {
           console.log(res);
           toast.success("Ragister Succesfuly....!");
@@ -90,7 +87,7 @@ const SignupComponent = () => {
                     className="form-control"
                     placeholder="Your Password *"
                     name="password"
-                    onChange={(e) => setpassword(e.target.value)}
+                    onChange={(e) => setpassword(e)}
                   />
                 </div>
                 <div className="form-group">

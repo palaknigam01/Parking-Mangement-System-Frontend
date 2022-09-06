@@ -39,7 +39,7 @@ const Banner = () => {
         <div>
           <Cards />
         </div>
-        <div className="container">
+        <div className="containt">
           <div className="fl-row-content-wrap vamtam-show-bg-image">
             <div className="fl-row-content fl-row-fixed-width fl-node-content">
               <div
@@ -124,7 +124,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="2601795260"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Customize &amp; reserve parking space as per
                                     company, staff, pay-&amp;-park, etc.
@@ -180,7 +180,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="2379757414"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Allocate slots as per two-wheeler and
                                     four-wheeler vehicles to utilise all
@@ -236,7 +236,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="272781058"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     No more manual checking of empty space. View
                                     it on your phone. Also view live reports.
@@ -306,7 +306,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="1727126396"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      //onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     QR code-based passes are instantly
                                     auto-generated for a visitor.<br></br>
@@ -361,7 +361,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="1393094593"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Parking passes generated can be on
                                     pay-&amp;-park or a monthly pay basis. It is
@@ -417,7 +417,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="3324279984"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Integrate parking passes with access control
                                     system - boom barriers, biometrics,
@@ -487,7 +487,7 @@ const Banner = () => {
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="2242927998"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Display empty slot info such as floor and
                                     bay on LED screens in the parking bay.
@@ -500,28 +500,28 @@ const Banner = () => {
                         </div>
                       </div>
                       <div
-                        class="fl-col fl-node-5c5427ea6c81f fl-col-small"
+                        className="fl-col fl-node-5c5427ea6c81f fl-col-small"
                         data-node="5c5427ea6c81f"
                       >
-                        <div class="fl-col-content fl-node-content vamtam-show-bg-image">
+                        <div className="fl-col-content fl-node-content vamtam-show-bg-image">
                           <div
-                            class="fl-module fl-module-vamtam-heading fl-node-5c5427ea6c86e"
+                            className="fl-module fl-module-vamtam-heading fl-node-5c5427ea6c86e"
                             data-node="5c5427ea6c86e"
                           >
-                            <div class="fl-module-content fl-node-content">
-                              <h3 class="vamtam-heading ">
-                                <span class="vamtam-heading-text">
+                            <div className="fl-module-content fl-node-content">
+                              <h3 className="vamtam-heading ">
+                                <span className="vamtam-heading-text">
                                   Ensure Periodic Patrolling
                                 </span>
                               </h3>
                             </div>
                           </div>
                           <div
-                            class="fl-module fl-module-rich-text fl-node-5c5427ea6d3df"
+                            className="fl-module fl-module-rich-text fl-node-5c5427ea6d3df"
                             data-node="5c5427ea6d3df"
                           >
-                            <div class="fl-module-content fl-node-content">
-                              <div class="fl-rich-text">
+                            <div className="fl-module-content fl-node-content">
+                              <div className="fl-rich-text">
                                 <p>
                                   <span>
                                     <img
@@ -537,13 +537,13 @@ const Banner = () => {
                                       data-medium-file="https://www.versionx.in/wp-content/uploads/2022/03/patroling.jpg"
                                       data-large-file="https://www.versionx.in/wp-content/uploads/2022/03/patroling.jpg"
                                       loading="lazy"
-                                      class="size-full wp-image-21339 alignleft"
+                                      className="size-full wp-image-21339 alignleft"
                                       src="https://www.versionx.in/wp-content/uploads/2022/03/patroling.jpg"
                                       alt=""
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="1323396085"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      //onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     <br></br>
                                     Monitor security guards&nbsp; on duty and
@@ -557,28 +557,28 @@ const Banner = () => {
                         </div>
                       </div>
                       <div
-                        class="fl-col fl-node-5c5427ea6c8b9 fl-col-small"
+                        className="fl-col fl-node-5c5427ea6c8b9 fl-col-small"
                         data-node="5c5427ea6c8b9"
                       >
-                        <div class="fl-col-content fl-node-content vamtam-show-bg-image">
+                        <div className="fl-col-content fl-node-content vamtam-show-bg-image">
                           <div
-                            class="fl-module fl-module-vamtam-heading fl-node-5c5427ea6c901"
+                            className="fl-module fl-module-vamtam-heading fl-node-5c5427ea6c901"
                             data-node="5c5427ea6c901"
                           >
-                            <div class="fl-module-content fl-node-content">
-                              <h3 class="vamtam-heading ">
-                                <span class="vamtam-heading-text">
+                            <div className="fl-module-content fl-node-content">
+                              <h3 className="vamtam-heading ">
+                                <span className="vamtam-heading-text">
                                   Levy Penalty for Violations
                                 </span>
                               </h3>
                             </div>
                           </div>
                           <div
-                            class="fl-module fl-module-rich-text fl-node-5c5427ea6d447"
+                            className="fl-module fl-module-rich-text fl-node-5c5427ea6d447"
                             data-node="5c5427ea6d447"
                           >
-                            <div class="fl-module-content fl-node-content">
-                              <div class="fl-rich-text">
+                            <div className="fl-module-content fl-node-content">
+                              <div className="fl-rich-text">
                                 <p>
                                   <span>
                                     <img
@@ -594,13 +594,13 @@ const Banner = () => {
                                       data-medium-file="https://www.versionx.in/wp-content/uploads/2022/03/parking-ticket.jpg"
                                       data-large-file="https://www.versionx.in/wp-content/uploads/2022/03/parking-ticket.jpg"
                                       loading="lazy"
-                                      class="size-full wp-image-21335 alignleft"
+                                      className="size-full wp-image-21335 alignleft"
                                       src="https://www.versionx.in/wp-content/uploads/2022/03/parking-ticket.jpg"
                                       alt=""
                                       width="90"
                                       height="90"
                                       pagespeed_url_hash="3637399468"
-                                      onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                                      // onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
                                     />
                                     Levy instant penalty tickets, if any person
                                     or vehicle is found guilty of any time or

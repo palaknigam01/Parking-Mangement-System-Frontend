@@ -25,10 +25,10 @@ const Footer = () => {
                 <h4>Quick Links</h4>
                 <ul>
                   <li>
-                    <Link to={"/home"}>Home</Link>
+                    <Link to={"/"}>Home</Link>
                   </li>
                   <li>
-                    <Link to={"/avl-sloats"}>Available Sloot</Link>
+                    <Link to={"/sloats"}>Available Sloot</Link>
                   </li>
                   <li>
                     <Link to={"/abput-us"}>About</Link>
@@ -63,21 +63,29 @@ const Footer = () => {
             <div className="col-12">
               <div className="line"></div>
               <div className="second2">
-                <a href="https://codepen.io/AndreeaBunget">
+                <Link to={"https://codepen.io/AndreeaBunget"}>
                   {" "}
                   <i className="fab fa-codepen fa-2x margin"></i>
-                </a>
-                <a href="https://github.com/WebDeveloperCodeRep">
+                </Link>
+                <Link to="https://github.com/WebDeveloperCodeRep">
                   {" "}
                   <i className="fab fa-github fa-2x margin"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/">
+                </Link>
+                <Link
+                  to={
+                    "https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/"
+                  }
+                >
                   {" "}
                   <i className="fab fa-linkedin fa-2x margin"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber">
+                </Link>
+                <Link
+                  to={
+                    "https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber"
+                  }
+                >
                   <i className="fab fa-youtube fa-2x margin"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

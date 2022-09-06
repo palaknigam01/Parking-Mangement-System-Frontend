@@ -11,6 +11,7 @@ import Slot from "./components/Slot";
 import Third from "./components/Third-Flor";
 import Second from "./components/Second-Flor";
 import Error from "./components/Error-page";
+import ProtectedRoutes from "./components/Auth/protectedroutes";
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Banner />} />
-        <Route path="/flor-1" element={<First />} />
-        <Route path="/flor-2" element={<Second />} />
-        <Route path="/flor-3" element={<Third />} />
+        <Route path="/flor-1" element={<ProtectedRoutes  Cmp={First}/>} />
+        <Route path="/flor-2" element={<ProtectedRoutes Cmp={Second}/>} />
+        <Route path="/flor-3" element={<ProtectedRoutes Cmp={Third} />} />
         <Route path="/sign-up" element={<SignupComponent />} />
         <Route path="/log-in" element={<SignInComponent />} />
         <Route path="/contect-us" element={<Contectus />} />

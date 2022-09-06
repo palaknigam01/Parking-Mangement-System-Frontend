@@ -2,7 +2,7 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
   justify-content: center;
-  padding: 250px;
+  padding: 300px;
   color: rgb(13, 39, 144);
   font-size: 40px;
   font-style: oblique;
@@ -21,4 +21,8 @@
   font-size: initial;
   box-sizing: border-box;
   background-origin: padding-box;
+}
+.container{
+  display: flex;
+  justify-content: center
 }

@@ -26,13 +26,13 @@ const SignInComponent = () => {
     } else {
       console.log(item);
       axios
-        .post("https://af3c-122-168-72-226.ap.ngrok.io/users/sign_in", item)
+        .post("https://3413-122-168-72-226.in.ngrok.io/users/sign_in", item)
         .then((res) => {
           console.log(res);
           sessionStorage.setItem("token", JSON.stringify(res.data.token));
+          console.log(res.data.token);
           toast.success("Login Sucsess....!");
           navigate("/");
-          //console.log('------------------------',res.data.token);
         })
         .catch((err) => {
           console.log(err);
